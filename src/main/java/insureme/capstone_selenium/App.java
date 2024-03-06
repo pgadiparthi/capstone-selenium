@@ -30,11 +30,20 @@ public class App
 	        ChromeOptions chromeoptions = new ChromeOptions();
 	        chromeoptions.addArguments("--headless");
 	        
+	        chromeoptions.addArguments("start-maximized"); // open Browser in maximized mode
+	        chromeoptions.addArguments("disable-infobars"); // disabling infobars
+	        chromeoptions.addArguments("--disable-extensions"); // disabling extensions
+	        chromeoptions.addArguments("--disable-gpu"); // applicable to windows os only
+	        chromeoptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+	        chromeoptions.addArguments("--no-sandbox"); // Bypass OS security model
+	        //WebDriver driver = new ChromeDriver(options);
+	        
 	        WebDriver driver = new ChromeDriver(chromeoptions);
+	        driver.get("https://google.com");
 	        
 	        System.out.println("Script Execution Started...");
 	        
-	        driver.get("http://107.21.193.163:8085/contact.html");
+	        //driver.get("http://107.21.193.163:8085/contact.html");
 	        
 	        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	        
