@@ -19,9 +19,13 @@ public class App
 	 public static void main( String[] args ) throws InterruptedException
 	    {
 	                
-	        //System.setProperty("webdriver.chrome.driver", "C:\\Prathap\\Azure\\Bootcamp-TCS\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 	        
-		    WebDriverManager.chromedriver().setup();
+		 
+		//System.setProperty("webdriver.chrome.driver", "C:\\Prathap\\Azure\\Bootcamp-TCS\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+	        
+	System.setProperty("webdriver.chrome.driver", "/opt/google/chrome/google-chrome");
+		    
+		 //WebDriverManager.chromedriver().setup();
 		    
 	        ChromeOptions chromeoptions = new ChromeOptions();
 	        chromeoptions.addArguments("--headless");
