@@ -23,9 +23,9 @@ public class App
 		 
 		//System.setProperty("webdriver.chrome.driver", "C:\\Prathap\\Azure\\Bootcamp-TCS\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 	        
-	    //System.setProperty("webdriver.chrome.driver", "/opt/google/chrome/google-chrome");
+	    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		    
-		    WebDriverManager.chromedriver().setup();
+		    //WebDriverManager.chromedriver().setup();
 		    
 	        ChromeOptions chromeoptions = new ChromeOptions();
 	        chromeoptions.addArguments("--headless");
